@@ -1,0 +1,26 @@
+﻿@{ 
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla Multiplicación</title>
+    <!--Una vez creado un stylesheet (css) se puede hacer drag&drop-->
+    <!--para incluir la referencia en el html automaticamente-->
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <table>
+        @foreach(string x in ViewBag.TablaMulti)
+        {
+            <tr>
+                <td>@x</td>
+            </tr>
+        }
+    </table>
+   
+    <a asp-action="FormSelectTabla">Otra Tabla</a>
+</body>
+</html>
